@@ -21,7 +21,7 @@ namespace EcoWatt.Service.UsuarioUseServices
             usuarioUse.IdBateria = usuarioUseRequest.IdBateria;
             usuarioUse.UsedAt = usuarioUseRequest.UsedAt;
 
-            await _usuarioUseRepository.Add(usuarioUse,3);
+            await _usuarioUseRepository.Add(usuarioUse);
         }
 
         public async Task<IEnumerable<UsuarioUse>> GetUsuarioUses()

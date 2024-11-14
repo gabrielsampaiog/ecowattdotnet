@@ -116,13 +116,14 @@ namespace EcoWatt.API.Controllers
                 return BadRequest();
             }
 
-            await _bateriaRepository.Add(bateria, 1);
-            bateriaResponse = _bateriaService.bateriaToResponse(bateria);
-
-            if (bateria.IdBateria == 0)
+            Usuario existingUsuario = await _usuarioRepository.GetById(bateria.IdUsuario);
+            if (existingUsuario == null)
             {
-                return NotFound("Ocorreu um erro de chave estrangeira, por favor verifique o id do usuário detentor da bateria.");
+                return NotFound("Usuário não cadastrado no sistema, por favor verificar id do usuário.");
             }
+
+            await _bateriaRepository.Add(bateria);
+            bateriaResponse = _bateriaService.bateriaToResponse(bateria);
 
             // Retorna a bateria sem seus dados sensíveis.
             return Ok(bateriaResponse);
@@ -168,8 +169,9 @@ namespace EcoWatt.API.Controllers
             }
 
             Usuario existingUsuario = await _usuarioRepository.GetById(bateria.IdUsuario);
-            if (existingUsuario == null) {
-                return NotFound("USUÁRIO NAO EXISTE");
+            if (existingUsuario == null)
+            {
+                return NotFound("Usuário não cadastrado no sistema, por favor verificar id do usuário.");
             }
 
             await _bateriaRepository.Update(id, bateria);

@@ -6,7 +6,7 @@
 
         Task<T> GetById(int id);
 
-        Task Add(T entity, int choice);
+        Task Add(T entity);
 
         Task Update(int id, T entity);
 
