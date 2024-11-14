@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcoWatt.Database")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a37af9bf131718efca522a0356aa696d944d5694")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb9bd5c760cac9b63d5462824fbe53d6dd6a0efc")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcoWatt.Database")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcoWatt.Database")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

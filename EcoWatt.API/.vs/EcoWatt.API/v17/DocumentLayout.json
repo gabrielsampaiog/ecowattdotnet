@@ -34,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BateriaRecommendationController.cs",
-              "DocumentMoniker": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.API\\Controllers\\BateriaRecommendationController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BateriaRecommendationController.cs",
-              "ToolTip": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.API\\Controllers\\BateriaRecommendationController.cs",
-              "RelativeToolTip": "Controllers\\BateriaRecommendationController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAQwDEAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T23:44:08.986Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -71,6 +58,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BateriaRecommendationController.cs",
+              "DocumentMoniker": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.API\\Controllers\\BateriaRecommendationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BateriaRecommendationController.cs",
+              "ToolTip": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.API\\Controllers\\BateriaRecommendationController.cs",
+              "RelativeToolTip": "Controllers\\BateriaRecommendationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T23:44:08.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UsuariosControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.Test\\UsuariosControllerTests.cs",
@@ -79,8 +79,7 @@
               "RelativeToolTip": "..\\EcoWatt.Test\\UsuariosControllerTests.cs",
               "ViewState": "AQIAADsAAAAAAAAAAAAIwEkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T23:38:48.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T23:38:48.012Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "..\\EcoWatt.Service\\UsuarioUseServices\\UsuarioUseService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T22:02:30.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T22:02:30.815Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "Controllers\\UsuariosController.cs",
               "ViewState": "AQIAAGkAAAAAAAAAAAAowHQAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T22:02:09.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T22:02:09.328Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "Controllers\\BateriasController.cs",
               "ViewState": "AQIAAIYAAAAAAAAAAAAwwHoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T22:01:56.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T22:01:56.435Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "..\\EcoWatt.Repository\\IRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T22:01:40.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T22:01:40.766Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "..\\EcoWatt.Repository\\Repository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T22:00:50.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T22:00:50.754Z"
             }
           ]
         }
