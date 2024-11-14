@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B1E33EB-0AAF-4686-83E1-06B8B2BC9B2E}|EcoWatt.API.csproj|c:\\users\\phgianini\\desktop\\gsdotnet\\ecowattdotnet\\ecowatt.api\\controllers\\bateriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B1E33EB-0AAF-4686-83E1-06B8B2BC9B2E}|EcoWatt.API.csproj|solutionrelative:controllers\\bateriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A503ED5-58CC-458E-BF93-F1A8AD823EF7}|..\\EcoWatt.Test\\EcoWatt.Test.csproj|c:\\users\\phgianini\\desktop\\gsdotnet\\ecowattdotnet\\ecowatt.test\\bateriascontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,12 +42,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BateriasController.cs",
+              "DocumentMoniker": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.API\\Controllers\\BateriasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BateriasController.cs",
+              "ToolTip": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.API\\Controllers\\BateriasController.cs",
+              "RelativeToolTip": "Controllers\\BateriasController.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAowKkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T22:09:39.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BateriasControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.Test\\BateriasControllerTests.cs",
               "RelativeDocumentMoniker": "..\\EcoWatt.Test\\BateriasControllerTests.cs",
               "ToolTip": "C:\\Users\\phgianini\\Desktop\\gsdotnet\\ecowattdotnet\\EcoWatt.Test\\BateriasControllerTests.cs",
               "RelativeToolTip": "..\\EcoWatt.Test\\BateriasControllerTests.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwDMAAAAAAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T21:33:34.885Z",
               "EditorCaption": ""
