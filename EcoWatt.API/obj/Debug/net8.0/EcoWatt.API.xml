@@ -43,6 +43,7 @@
             <response code="200">Retorna a recomendação</response>
             <response code="400">Bad Request</response>
             <response code="401">Usuário não autorizado</response>
+            <response code="500">Problema nas chaves estrangeiras.</response>
         </member>
         <member name="T:EcoWatt.API.Controllers.BateriasController">
             <summary>

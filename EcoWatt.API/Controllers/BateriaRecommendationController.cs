@@ -59,11 +59,13 @@ namespace EcoWatt.API.Controllers
         /// <response code="200">Retorna a recomendação</response>
         /// <response code="400">Bad Request</response>
         /// <response code="401">Usuário não autorizado</response>
+        /// <response code="500">Problema nas chaves estrangeiras.</response>
         [HttpGet("{usuarioId}")]
         [Authorize]
         [ProducesResponseType(typeof(List<Bateria>), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> GetRecommendations(int usuarioId)
         {
            
