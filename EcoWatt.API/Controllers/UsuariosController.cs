@@ -38,8 +38,8 @@ namespace EcoWatt.API.Controllers
         [HttpGet]
         [AllowAnonymous]
         [ProducesResponseType(typeof(IEnumerable<UsuarioResponse>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<ActionResult<IEnumerable<UsuarioResponse>>> GetAll()
         {
             IEnumerable<Usuario> usuarios = await _usuarioRepository.GetAll();
@@ -66,8 +66,8 @@ namespace EcoWatt.API.Controllers
         [HttpGet("{id}")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(UsuarioResponse), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Get(int id)
         {
 
@@ -93,15 +93,15 @@ namespace EcoWatt.API.Controllers
         /// </remarks>
         /// <response code="200">Usuario criado</response>
         /// <response code="400">Bad Request</response>
-        /// <response code="500">Erro de servidor</response>
         /// <response code="401">Usuário não autorizado</response>
+        /// <response code="500">Erro de servidor</response>
         // POST api/<UsuariosController>
         [HttpPost]
         [Authorize]
         [ProducesResponseType(typeof(UsuarioResponse), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Post(UsuarioRequest usuarioRequest)
         {
             Usuario usuario = new Usuario();
@@ -132,16 +132,16 @@ namespace EcoWatt.API.Controllers
         /// Esse endpoint atualiza o usuario com base no id fornecido.
         /// </remarks>
         /// <response code="200">Usuario atualizado</response>
+        /// <response code="401">Usuário não autorizado</response>
         /// <response code="404">Nenhum usuario encontrado</response>
         /// <response code="500">Erro interno no servidor</response>
-        /// <response code="401">Usuário não autorizado</response>
         // PUT api/<UsuariosController>/5
         [HttpPut("{id}")]
         [Authorize]
         [ProducesResponseType(typeof(UsuarioResponse), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Put(int id, [FromBody] UsuarioRequest usuarioRequest)
         {
 
@@ -176,16 +176,16 @@ namespace EcoWatt.API.Controllers
         /// Esse endpoint deleta o usuario com base no id fornecido.
         /// </remarks>
         /// <response code="200">Usuario deletado</response>
+        /// <response code="401">Usuário não autorizado</response>
         /// <response code="404">Nenhum usuario encontrado</response>
         /// <response code="500">Erro interno no servidor</response>
-        /// <response code="401">Usuário não autorizado</response>
         // DELETE api/<UsuariosController>/5
         [HttpDelete("{id}")]
         [Authorize]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
             

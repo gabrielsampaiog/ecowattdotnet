@@ -34,13 +34,15 @@ namespace EcoWatt.API.Controllers
         /// </remarks>
         /// <response code="200">Use criada</response>
         /// <response code="401">Usuário não autorizado</response>
+        /// <response code="500">Problema nas chaves estrangeiras.</response>
         [HttpPost]
         [Authorize]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
-        public async Task<IActionResult> PostUsuarioUseAsync([FromBody] UsuarioUseRequest usuarioUseRequest)
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        public async Task<ActionResult> PostUsuarioUse([FromBody] UsuarioUseRequest usuarioUseRequest)
         {
-            _usuarioUseService.AddUsuarioUse(usuarioUseRequest);
+            await _usuarioUseService.AddUsuarioUse(usuarioUseRequest);
             return Ok(usuarioUseRequest);
         }
 

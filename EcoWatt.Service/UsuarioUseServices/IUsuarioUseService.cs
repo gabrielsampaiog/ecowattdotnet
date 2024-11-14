@@ -6,7 +6,7 @@ namespace EcoWatt.Service.UsuarioUseServices
 {
     public interface IUsuarioUseService
     {
-        void AddUsuarioUse(UsuarioUseRequest usuarioUseRequest);
+        Task AddUsuarioUse(UsuarioUseRequest usuarioUseRequest);
 
         Task<IEnumerable<UsuarioUse>> GetUsuarioUses();
     }

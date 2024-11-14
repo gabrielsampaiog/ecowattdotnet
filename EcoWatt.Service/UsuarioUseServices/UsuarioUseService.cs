@@ -13,7 +13,7 @@ namespace EcoWatt.Service.UsuarioUseServices
     {
         private readonly IRepository<UsuarioUse> _usuarioUseRepository = usuarioUseRepository;
 
-        public void AddUsuarioUse(UsuarioUseRequest usuarioUseRequest)
+        public async Task AddUsuarioUse(UsuarioUseRequest usuarioUseRequest)
         {
             UsuarioUse usuarioUse = new UsuarioUse();
 
@@ -21,7 +21,7 @@ namespace EcoWatt.Service.UsuarioUseServices
             usuarioUse.IdBateria = usuarioUseRequest.IdBateria;
             usuarioUse.UsedAt = usuarioUseRequest.UsedAt;
 
-            _usuarioUseRepository.Add(usuarioUse,3);
+            await _usuarioUseRepository.Add(usuarioUse,3);
         }
 
         public async Task<IEnumerable<UsuarioUse>> GetUsuarioUses()

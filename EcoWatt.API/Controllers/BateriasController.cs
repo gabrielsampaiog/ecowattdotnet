@@ -15,9 +15,10 @@ namespace EcoWatt.API.Controllers
     [Route("api/baterias/[controller]")]
     [ApiController]
     [Tags("Baterias")]
-    public class BateriasController(IRepository<Bateria> bateriaRepository) : ControllerBase
+    public class BateriasController(IRepository<Bateria> bateriaRepository, IRepository<Usuario> usuarioRepository) : ControllerBase
     {
         private readonly IRepository<Bateria> _bateriaRepository = bateriaRepository;
+        private readonly IRepository<Usuario> _usuarioRepository = usuarioRepository;
         private readonly BateriaService _bateriaService = new BateriaService();
 
 
@@ -37,8 +38,8 @@ namespace EcoWatt.API.Controllers
         [HttpGet]
         [AllowAnonymous]
         [ProducesResponseType(typeof(IEnumerable<BateriaResponse>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<ActionResult<IEnumerable<BateriaResponse>>> GetAll()
         {
             IEnumerable<Bateria> baterias = await _bateriaRepository.GetAll();
@@ -65,8 +66,8 @@ namespace EcoWatt.API.Controllers
         [HttpGet("{id}")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(BateriaResponse), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Get(int id)
         {
 
@@ -92,17 +93,17 @@ namespace EcoWatt.API.Controllers
         /// </remarks>
         /// <response code="200">Bateria criada</response>
         /// <response code="400">Bad Request</response>
-        /// <response code="500">Erro de servidor</response>
-        /// <response code="404">Usuário não encontrado. </response>
         /// <response code="401">Usuário não autorizado</response>
+        /// <response code="404">Usuário não encontrado. </response>
+        /// <response code="500">Erro de servidor</response>
         // POST api/<BateriasController>
         [HttpPost]
         [Authorize]
         [ProducesResponseType(typeof(BateriaResponse), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType(typeof(string),(int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Post(BateriaRequest bateriaRequest)
         {
             Bateria bateria = new Bateria();
@@ -138,16 +139,18 @@ namespace EcoWatt.API.Controllers
         /// Esse endpoint atualiza a bateria com base no id fornecido.
         /// </remarks>
         /// <response code="200">Bateria atualizada</response>
+        /// <response code="400">Bad Request</response>
+        /// <response code="401">Usuário não autorizado</response>
         /// <response code="404">Nenhuma bateria encontrada</response>
         /// <response code="500">Erro interno no servidor</response>
-        /// <response code="401">Usuário não autorizado</response>
         // PUT api/<BateriasController>/5
         [HttpPut("{id}")]
         [Authorize]
         [ProducesResponseType(typeof(BateriaResponse), (int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Put(int id, [FromBody] BateriaRequest bateriaRequest)
         {
 
@@ -162,6 +165,11 @@ namespace EcoWatt.API.Controllers
             if (existingBateria == null)
             {
                 return NotFound();
+            }
+
+            Usuario existingUsuario = await _usuarioRepository.GetById(bateria.IdUsuario);
+            if (existingUsuario == null) {
+                return NotFound("USUÁRIO NAO EXISTE");
             }
 
             await _bateriaRepository.Update(id, bateria);
@@ -182,16 +190,16 @@ namespace EcoWatt.API.Controllers
         /// Esse endpoint deleta a bateria com base no id fornecido.
         /// </remarks>
         /// <response code="200">Bateria deletada</response>
+        /// <response code="401">Usuário não autorizado</response>
         /// <response code="404">Nenhuma bateria encontrada</response>
         /// <response code="500">Erro interno no servidor</response>
-        /// <response code="401">Usuário não autorizado</response>
         // DELETE api/<BateriasController>/5
         [HttpDelete("{id}")]
         [Authorize]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.Unauthorized)]
+        [ProducesResponseType(typeof(EcoWatt.Model.ErrorResponse), (int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
 

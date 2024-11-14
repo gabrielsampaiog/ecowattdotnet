@@ -25,6 +25,7 @@ namespace EcoWatt.Model
         [ForeignKey("IdBateria")]
         public Bateria Bateria { get; set; }
 
+        [Column("used_at", TypeName = "date")]
         public DateTime UsedAt { get; set; } = DateTime.Now;
     }
 }

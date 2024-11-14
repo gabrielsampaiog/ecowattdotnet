@@ -132,7 +132,8 @@ namespace EcoWatt.Database.Migrations
                         .HasColumnName("id_usuario");
 
                     b.Property<DateTime>("UsedAt")
-                        .HasColumnType("TIMESTAMP(7)");
+                        .HasColumnType("date")
+                        .HasColumnName("used_at");
 
                     b.HasKey("IdUse");
 
