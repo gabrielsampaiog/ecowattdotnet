@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcoWatt.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+127e9c490a35e68d09795020023f104f9e56874a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb9bd5c760cac9b63d5462824fbe53d6dd6a0efc")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcoWatt.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcoWatt.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

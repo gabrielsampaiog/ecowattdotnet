@@ -73,7 +73,7 @@ namespace EcoWatt.Tests
                 DsNomeCompleto = "User One"
             };
 
-            _mockUsuarioRepository.Setup(repo => repo.Add(It.IsAny<Usuario>(),0)).Returns(Task.CompletedTask);
+            _mockUsuarioRepository.Setup(repo => repo.Add(It.IsAny<Usuario>())).Returns(Task.CompletedTask);
             _mockUsuarioRepository.Setup(repo => repo.GetById(It.IsAny<int>())).ReturnsAsync(usuario);
 
             // Act
