@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EcoWatt.API</name>
+    </assembly>
+    <members>
+        <member name="T:EcoWatt.API.Controllers.BateriaRecommendationController">
+            <summary>
+            Controlador responsável por gerenciar recomendação de baterias.
+            </summary>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriaRecommendationController.#ctor(EcoWatt.Service.UsuarioUseServices.IUsuarioUseService,EcoWatt.Service.Recommendation.RecommendationEngine,EcoWatt.Repository.IRepository{EcoWatt.Model.Bateria})">
+            <summary>
+            Controlador responsável por gerenciar recomendação de baterias.
+            </summary>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriaRecommendationController.PostUsuarioUse(EcoWatt.Model.DTO.Request.UsuarioUseRequest)">
+            <summary>
+            Cria uma nova use de bateria.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                POST /usuarioUse
+            
+            Esse endpoint salva uma nova use de bateria no banco de dados.
+            </remarks>
+            <response code="200">Use criada</response>
+            <response code="401">Usuário não autorizado</response>
+            <response code="500">Problema nas chaves estrangeiras.</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriaRecommendationController.GetRecommendations(System.Int32)">
+            <summary>
+            Retorna uma recomendação com base no id fornecido.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                GET /usuarioId
+            
+            Esse endpoint retorna uma recomendação com base no id fornecido.
+            </remarks>
+            <response code="200">Retorna a recomendação</response>
+            <response code="400">Bad Request</response>
+            <response code="401">Usuário não autorizado</response>
+        </member>
+        <member name="T:EcoWatt.API.Controllers.BateriasController">
+            <summary>
+            Controlador responsável por gerenciar baterias.
+            </summary>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriasController.#ctor(EcoWatt.Repository.IRepository{EcoWatt.Model.Bateria},EcoWatt.Repository.IRepository{EcoWatt.Model.Usuario})">
+            <summary>
+            Controlador responsável por gerenciar baterias.
+            </summary>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriasController.GetAll">
+            <summary>
+            Retorna a lista completa de baterias.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                GET /bateria
+            
+            Esse endpoint retorna uma lista de todos as baterias disponíveis no sistema.
+            </remarks>
+            <response code="200">Retorna a lista de baterias</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriasController.Get(System.Int32)">
+            <summary>
+            Retorna uma bateria com base no id fornecido.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                GET /bateria/id
+            
+            Esse endpoint retorna uma bateria com base no id fornecido.
+            </remarks>
+            <response code="200">Retorna a bateria</response>
+            <response code="404">Nenhuma bateria encontrada</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriasController.Post(EcoWatt.Model.DTO.Request.BateriaRequest)">
+            <summary>
+            Cria uma nova bateria.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                POST /bateria
+            
+            Esse endpoint salva os dados da bateria no banco de dados.
+            </remarks>
+            <response code="200">Bateria criada</response>
+            <response code="400">Bad Request</response>
+            <response code="401">Usuário não autorizado</response>
+            <response code="404">Usuário não encontrado. </response>
+            <response code="500">Erro de servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriasController.Put(System.Int32,EcoWatt.Model.DTO.Request.BateriaRequest)">
+            <summary>
+            Atualiza uma bateria com base no id fornecido.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                PUT /bateria/{id}
+            
+            Esse endpoint atualiza a bateria com base no id fornecido.
+            </remarks>
+            <response code="200">Bateria atualizada</response>
+            <response code="400">Bad Request</response>
+            <response code="401">Usuário não autorizado</response>
+            <response code="404">Nenhuma bateria encontrada</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.BateriasController.Delete(System.Int32)">
+            <summary>
+            Deleta uma bateria com base no id fornecido.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                DELETE/bateria/{id}
+            
+            Esse endpoint deleta a bateria com base no id fornecido.
+            </remarks>
+            <response code="200">Bateria deletada</response>
+            <response code="401">Usuário não autorizado</response>
+            <response code="404">Nenhuma bateria encontrada</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="T:EcoWatt.API.Controllers.UsuariosController">
+            <summary>
+            Controlador responsável por gerenciar usuarios.
+            </summary>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.UsuariosController.#ctor(EcoWatt.Repository.IRepository{EcoWatt.Model.Usuario})">
+            <summary>
+            Controlador responsável por gerenciar usuarios.
+            </summary>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.UsuariosController.GetAll">
+            <summary>
+            Retorna a lista completa de usuarios.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                GET /usuario
+            
+            Esse endpoint retorna uma lista de todos os usuarios disponíveis no sistema.
+            </remarks>
+            <response code="200">Retorna a lista de usuarios</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.UsuariosController.Get(System.Int32)">
+            <summary>
+            Retorna um usuario com base no id fornecido.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                GET /usuario/id
+            
+            Esse endpoint retorna um usuario com base no id fornecido.
+            </remarks>
+            <response code="200">Retorna o usuario</response>
+            <response code="404">Nenhum usuario encontrado</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.UsuariosController.Post(EcoWatt.Model.DTO.Request.UsuarioRequest)">
+            <summary>
+            Cria um novo usuario.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                POST /usuario
+            
+            Esse endpoint salva os dados do usuario no banco de dados.
+            </remarks>
+            <response code="200">Usuario criado</response>
+            <response code="400">Bad Request</response>
+            <response code="401">Usuário não autorizado</response>
+            <response code="500">Erro de servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.UsuariosController.Put(System.Int32,EcoWatt.Model.DTO.Request.UsuarioRequest)">
+            <summary>
+            Atualiza um usuario com base no id fornecido.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                PUT /usuario/{id}
+            
+            Esse endpoint atualiza o usuario com base no id fornecido.
+            </remarks>
+            <response code="200">Usuario atualizado</response>
+            <response code="401">Usuário não autorizado</response>
+            <response code="404">Nenhum usuario encontrado</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+        <member name="M:EcoWatt.API.Controllers.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Deleta um usuario com base no id fornecido.
+            </summary>
+            <remarks>
+            Exemplo de solicitação:
+            
+                DELETE/usuario/{id}
+            
+            Esse endpoint deleta o usuario com base no id fornecido.
+            </remarks>
+            <response code="200">Usuario deletado</response>
+            <response code="401">Usuário não autorizado</response>
+            <response code="404">Nenhum usuario encontrado</response>
+            <response code="500">Erro interno no servidor</response>
+        </member>
+    </members>
+</doc>

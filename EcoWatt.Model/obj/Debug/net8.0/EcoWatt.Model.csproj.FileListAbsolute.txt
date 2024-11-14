@@ -1,0 +1,13 @@
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\bin\Debug\net8.0\EcoWatt.Model.deps.json
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\bin\Debug\net8.0\EcoWatt.Model.dll
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\bin\Debug\net8.0\EcoWatt.Model.pdb
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.csproj.AssemblyReference.cache
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.AssemblyInfoInputs.cache
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.AssemblyInfo.cs
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.csproj.CoreCompileInputs.cache
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.sourcelink.json
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.dll
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\refint\EcoWatt.Model.dll
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\EcoWatt.Model.pdb
+C:\Users\phgianini\Desktop\gsdotnet\ecowattdotnet\EcoWatt.Model\obj\Debug\net8.0\ref\EcoWatt.Model.dll
