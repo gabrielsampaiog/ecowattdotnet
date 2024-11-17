@@ -4,6 +4,29 @@ API desenvolvida para a entrega da disciplina ADVANCED BUSINESS DEVELOPMENT WITH
 UPDATE BANCO
 dotnet ef database update --context FIAPDBContext --project "caminho/projeto/EcoWatt.Database" --startup-project "caminho/projeto/EcoWatt.API"
 
-SETANDO VARIAVEL DE AMBIENTE
+Instruções de uso: Trocar ConnectionStrings no arquivo appsettings.json ou abrir o cmd e rodar os seguintes comandos: <br>
+setx ORACLE_CONNECTION_STRING "Data Source=oracle.fiap.com.br:1521/orcl;User ID=XXXXXXXX;Password=XXXXXX;" <br>
 
-setx ORACLE_CONNECTION_STRING "Data Source=oracle.fiap.com.br:1521/orcl;User ID=XXXXXXXX;Password=XXXXXX;"
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Swagger": {
+    "Title": "EcoWatt API",
+    "Description": "API para cadastrar usuários e baterias",
+    "Email": "rm552342@fiap.com.br",
+    "Name": "Gabriel Sampaio"
+  },
+  "ConnectionStrings": {
+    "OracleFIAP": ""
+  }
+}
+
+```
+---
+
