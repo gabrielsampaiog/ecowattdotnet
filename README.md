@@ -61,7 +61,7 @@ EcoWatt – juntos, construindo um futuro mais sustentável.
 
 
 # Documentação ECOWATT API .NET
-API desenvolvida para a entrega da disciplina ADVANCED BUSINESS DEVELOPMENT WITH .NET para a Global Solution
+Branch da API desenvolvida para a entrega da disciplina MASTERING RELATIONAL AND NON-RELATIONAL DATABASE para a Global Solution
 
 Disciplina: 
 ADVANCED BUSINESS DEVELOPMENT WITH .NET
