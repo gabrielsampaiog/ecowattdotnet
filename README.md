@@ -1,4 +1,14 @@
-# ecowattdotnet
+---
+
+# Global Solution - .NET
+
+Disciplina: 
+ADVANCED BUSINESS DEVELOPMENT WITH .NET
+
+Professor: 
+THIAGO KELLER
+
+# EcoWattdotnet
 API desenvolvida para a entrega da disciplina ADVANCED BUSINESS DEVELOPMENT WITH .NET para a Global Solution
 
 UPDATE BANCO
