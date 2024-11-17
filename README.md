@@ -97,3 +97,18 @@ dotnet ef database update --context FIAPDBContext --project "caminho/projeto/Eco
 ```
 ---
 
+---
+
+## Equipe
+
+Apresentação dos integrantes da equipe de desenvolvimento e suas responsabilidades no projeto:
+
+- 2TDSPM Gabriel Sampaio RM 552342 - Banco de dados / C#
+- 2TDSPM Gabriel Neves RM 552244 - React Native (Front End)
+- 2TDSPM Livia Freitas RM 99892 - API Java
+- 2TDSAV Rafael Mendonça RM 552422 - IA
+- 2TDSPM Renato Romeu RM 551325 - DevOps, QA, UX, Business
+  
+---
+
+
