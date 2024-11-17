@@ -16,7 +16,7 @@ dotnet ef database update --context FIAPDBContext --project "caminho/projeto/Eco
 
 Instruções de uso: Trocar ConnectionStrings no arquivo appsettings.json ou abrir o cmd e rodar os seguintes comandos: <br>
 setx ORACLE_CONNECTION_STRING "Data Source=oracle.fiap.com.br:1521/orcl;User ID=XXXXXXXX;Password=XXXXXX;" <br>
-
+---
 
 ```json
 {
