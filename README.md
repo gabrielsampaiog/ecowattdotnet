@@ -110,7 +110,7 @@ Apresentação dos integrantes da equipe de desenvolvimento e suas responsabilid
 - 2TDSPM Renato Romeu RM 551325 - DevOps, QA, UX, Business
   
 ---
-
+<br>
 1. Repository Pattern
 O padrão Repository foi aplicado para abstrair as operações de acesso aos dados.
 
