@@ -23,7 +23,7 @@ namespace EcoWatt.Repository
 
             if (choice == 0)
             {
-                var sqlCommand = "BEGIN inserir_ecowatt_usuario(:param1, :param2, :param3, :param4, :param5, :outputIdParam); END;";
+                var sqlCommand = "BEGIN PKG_ECOWATT_OBJECTS_BACKEND.inserir_ecowatt_usuario(:param1, :param2, :param3, :param4, :param5, :outputIdParam); END;";
 
                 var dsUsuarioPropriedade = typeof(T).GetProperty("DsUsuario");
                 var dsSenhaPropriedade = typeof(T).GetProperty("DsSenha");
@@ -67,7 +67,7 @@ namespace EcoWatt.Repository
 
             else if (choice == 1)
             {
-                var sqlCommand = "BEGIN inserir_ecowatt_baterias(:param1, :param2, :param3, :param4, :param5, :param6, :param7, :param8, :param9, :outputIdParam); END;";
+                var sqlCommand = "BEGIN PKG_ECOWATT_OBJECTS_BACKEND.inserir_ecowatt_baterias(:param1, :param2, :param3, :param4, :param5, :param6, :param7, :param8, :param9, :outputIdParam); END;";
 
                 var idUsuarioPropriedade = typeof(T).GetProperty("IdUsuario");
                 var dsTipoBateriaPropriedade = typeof(T).GetProperty("DsTipoBateria");

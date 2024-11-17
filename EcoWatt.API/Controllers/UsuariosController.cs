@@ -114,7 +114,7 @@ namespace EcoWatt.API.Controllers
                 return BadRequest();
             }
 
-            await _usuarioRepository.Add(usuario,0);
+            await _usuarioRepository.Add(usuario, 0);
             usuarioResponse = _usuarioService.usuarioToResponse(usuario);
 
             // Retorna o usuario sem seus dados sensíveis.

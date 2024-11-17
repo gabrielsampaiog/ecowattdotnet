@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EcoWatt.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+127e9c490a35e68d09795020023f104f9e56874a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f78ceaf9ee11c767f6209e6c28886915b7ea2f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("EcoWatt.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EcoWatt.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
