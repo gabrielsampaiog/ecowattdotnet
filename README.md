@@ -116,8 +116,8 @@ O padrão Repository foi aplicado para abstrair as operações de acesso aos dad
 Implementação:
 IRepository<T>: Interface genérica para operações CRUD.
 UsuarioRepository e BateriaRepository: Implementações específicas para as entidades.
+  
 <br>
-
 2. Dependency Injection (DI)
 O padrão de Injeção de Dependência foi utilizado para gerenciar as dependências entre as classes.
 Implementação:
@@ -129,8 +129,8 @@ O padrão DTO foi aplicado para transferir dados entre a camada de API e as cama
 Implementação:
 UsuarioRequest e UsuarioResponse: Modelos para criar ou retornar dados de usuários.
 UsuarioUseRequest: Modelo para salvar usos de baterias.
-<br>
 
+<br>
 4. Factory Pattern (parcial)
 Utilizado no contexto do RecommendationEngine para criar modelos de recomendação.
 Implementação:
