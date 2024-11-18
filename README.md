@@ -71,6 +71,88 @@ A EcoWatt inclui um dispositivo dedicado ao monitoramento e gerenciamento do car
 
 ---
 
+
+
+
+# Documentação ECOWATT API .NET
+API desenvolvida para a entrega da disciplina ADVANCED BUSINESS DEVELOPMENT WITH .NET para a Global Solution
+
+Disciplina: 
+ADVANCED BUSINESS DEVELOPMENT WITH .NET
+
+Professor: 
+THIAGO KELLER
+
+Instruções de uso: Trocar ConnectionStrings no arquivo appsettings.json ou abrir o cmd e rodar os seguintes comandos: <br>
+setx ORACLE_CONNECTION_STRING "Data Source=oracle.fiap.com.br:1521/orcl;User ID=XXXXXXXX;Password=XXXXXX;" <br><br>
+dotnet ef database update --context FIAPDBContext --project "caminho/projeto/EcoWatt.Database" --startup-project "caminho/projeto/EcoWatt.API"
+
+
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Swagger": {
+    "Title": "EcoWatt API",
+    "Description": "API para cadastrar usuários e baterias",
+    "Email": "rm552342@fiap.com.br",
+    "Name": "Gabriel Sampaio"
+  },
+  "ConnectionStrings": {
+    "OracleFIAP": ""
+  }
+}
+
+```
+---
+
+---
+
+<br>
+1. Repository Pattern
+O padrão Repository foi aplicado para abstrair as operações de acesso aos dados.
+Implementação:
+IRepository<T>: Interface genérica para operações CRUD.
+UsuarioRepository e BateriaRepository: Implementações específicas para as entidades.
+<br>
+
+<br>
+2. Dependency Injection (DI)
+O padrão de Injeção de Dependência foi utilizado para gerenciar as dependências entre as classes.
+Implementação:
+Serviços e repositórios são registrados no contêiner de DI e injetados nos controllers e outros serviços.
+<br>
+
+<br>
+3. DTO (Data Transfer Object)
+O padrão DTO foi aplicado para transferir dados entre a camada de API e as camadas internas da aplicação.
+Implementação:
+UsuarioRequest e UsuarioResponse: Modelos para criar ou retornar dados de usuários.
+UsuarioUseRequest: Modelo para salvar usos de baterias.
+<br>
+
+<br>
+4. Factory Pattern (parcial)
+Utilizado no contexto do RecommendationEngine para criar modelos de recomendação.
+Implementação:
+A lógica de treinamento e previsão é encapsulada no RecommendationEngine, permitindo a criação de modelos com base nos dados fornecidos.
+<br>
+
+<br>
+5. Clean Architecture (inspirado)
+A API segue princípios da Clean Architecture, como separação de responsabilidades entre camadas e baixo acoplamento.
+Camadas Principais:
+API (Apresentação): Controladores para interação com os clientes.
+Serviços (Domínio): Regras de negócio e lógica de aplicação.
+Repositórios (Infraestrutura): Comunicação com o banco de dados.
+
+
+
 ## Serviços de Software da EcoWatt
 
 ### 1. Plataforma de Monitoramento em Tempo Real
