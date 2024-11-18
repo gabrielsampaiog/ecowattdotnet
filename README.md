@@ -1,4 +1,4 @@
-# EcoWatt - Global Solution H2’ 24
+# EcoWatt - Global Solution 2024
 
 **Energia para um futuro sustentável**
 
